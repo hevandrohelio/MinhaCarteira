@@ -12,10 +12,18 @@ public class Sistema {
 
         try {
             Transacao despesa1 = new Despesa("Conta de Luz", "20/02/2026", 150.00);
-            Transacao receita1 = new Receita("Salário Mensal", "05/02/2026", 5000.00);
-            Transacao despesa2 = new Despesa("Supermercado", "15/02/2026", 600.00);
             transacoes.add(despesa1);
-            transacoes.add(receita1);
+        } catch (ValorInvalidoException | IllegalArgumentException e) {
+            System.out.println("Erro ao registrar transação: " + e.getMessage());
+        }
+        try {
+            Transacao despesa2 = new Despesa("Multa", "20/02/2026", -150.00);
+            transacoes.add(despesa2);
+        } catch (ValorInvalidoException | IllegalArgumentException e) {
+            System.out.println("Erro ao registrar transação: " + e.getMessage());
+        }
+        try{
+            Transacao despesa2 = new Receita("Salário", "20/02/2026", 1600.00);
             transacoes.add(despesa2);
         } catch (ValorInvalidoException | IllegalArgumentException e) {
             System.out.println("Erro ao registrar transação: " + e.getMessage());
