@@ -22,3 +22,4 @@ public class Receita extends Transacao implements Tributavel{
 
     }
 }
+
