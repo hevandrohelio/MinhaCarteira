@@ -17,7 +17,7 @@ public class Receita extends Transacao implements Tributavel{
         System.out.println("Receita: ");
         System.out.println("Descrição: " + getDescricao());
         System.out.println("Valor: " + getValor());
-        System.out.println("Imposto: " + calcularImposto());
+        System.out.println("Imposto: " + String.format("%.2f", calcularImposto()));
         System.out.println("Data: " + getData());
 
     }

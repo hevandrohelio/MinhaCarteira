@@ -2,7 +2,10 @@ package br.mack.carteira;
 
 import br.mack.carteira.exceptions.ValorInvalidoException;
 
-abstract public class Transacao {
+import java.io.Serializable;
+
+abstract public class Transacao implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String descricao;
     private double valor;
     private String data;
